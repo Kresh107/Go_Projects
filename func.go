@@ -25,8 +25,8 @@ func makeButtons() *tbot.InlineKeyboardMarkup {
 		CallbackData:	"paper",
 	}
 	btnScissors := tbot.InlineKeyboardButton{
-		Text:			"Scissors",
-		CallbackData:	"scissorss",
+		Text:			"Scissorss",
+		CallbackData:	"scissors",
 	}
 	return &tbot.InlineKeyboardMarkup{
 		InlineKeyboard: [][]tbot.InlineKeyboardButton{
