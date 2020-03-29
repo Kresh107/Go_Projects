@@ -37,7 +37,9 @@ func main() {
 	bot := tbot.New(token, tbot.WithWebhook("https://np-notifier-bot.herokuapp.com", ":"+os.Getenv("PORT")))
 	app.client = bot.Client()
 	bot.HandleMessage("/start", app.startHandler)
-	bot.HandleMessage("/play", app.playHandler)
-	bot.HandleCallback(app.callbackHandler)
-	log.Fatal(bot.Start())
+	for {
+		bot.HandleMessage("/play", app.playHandler)
+		bot.HandleCallback(app.callbackHandler)
+		log.Fatal(bot.Start())
+	}
 }
