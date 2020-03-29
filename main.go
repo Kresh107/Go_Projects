@@ -38,8 +38,7 @@ func main() {
 	app.client = bot.Client()
 	bot.HandleMessage("/start", app.startHandler)
 	bot.HandleMessage("/play", app.playHandler)
-	for {
-		bot.HandleCallback(app.callbackHandler)
-		log.Fatal(bot.Start())
+	bot.HandleCallback(app.callbackHandler)
+	log.Fatal(bot.Start())
 	}
 }
